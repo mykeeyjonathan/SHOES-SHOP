@@ -1,0 +1,395 @@
+@font-face {
+    font-family: 'Catamaran';
+    src: url(../FONTS/Catamaran.ttf);
+}
+@font-face {
+    font-family: 'GrandHotel';
+    src: url(../FONTS/GrandHotel-.ttf);
+}
+:root{
+    --primarycolor:yellow;
+    --mainDark:coral;
+    --secondarycolor:gray;
+    --letterspacing:.5rem;
+    --mainTransition:all .3s ease-in-out;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    font-family: 'Catamaran';
+}
+
+.header{
+    background: url(../IMAGES/SHOES\ @1.jpg);
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-subtitle{
+    font-family: 'GrandHotel';
+    font-size: 3rem;
+    color:yellow;
+    animation: slidefromkushoto 2s 1;
+
+}
+@keyframes slidefromkushoto {
+    0%{
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+.header-title{
+    font-family: 'Catamaran';
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color:coral;
+    letter-spacing: var(--letterspacing);
+    animation: slidefromkulia 2s 1;
+}
+@keyframes slidefromkulia {
+    0%{
+        transform: translateX(1000px);
+    }
+    50%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+.header-title-thin{
+    letter-spacing: var(--letterspacing);
+    font-size: 3.5rem;
+    font-family: 'GrandHotel';
+    color: greenyellow;
+    animation:  sogea 2s 1;
+}
+@keyframes sogea {
+    0%{
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+a{
+    text-decoration: none;
+}
+.main-btn{
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--secondarycolor);
+    color: black;
+    padding: .5rem 3rem;
+    outline: 2px solid  var(--primarycolor);
+    outline-offset: 2px;
+    animation:dundadunda 2s 1 ;
+}
+@keyframes dundadunda {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+.divider{
+    height: .5rem;
+    background: linear-gradient(to right, var(--primarycolor),var(--secondarycolor),var(--primarycolor));
+}
+.huduma-section{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+.huduma{
+    padding: 1rem;
+    flex-shrink: 0;
+    width: 50%;
+    text-align: center;
+    transition: var(--mainTransition);
+}
+@media screen and (min-width:576px) {
+    .huduma{
+        width: 25%;
+    }
+    
+}
+.huduma:hover{
+    cursor:pointer;
+    background-color: var(--primarycolor);
+}
+.huduma:hover .huduma-title{
+    color:black;
+}
+.huduma-icon{
+    font-size: 2.5px;
+}
+.huduma-title{
+    color: chocolate;
+    font-family: grandhotel;
+    font-size: 2.5rem;
+    transition: var(--mainTransition);
+}
+.huduma-text{
+    margin: 0 auto;
+    max-width: 200px;
+}
+.huduma:hover .huduma-title{
+    transform: translateY(-5px);
+}
+.kuhusu-section{
+    display: flex;
+    padding: 4rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.image-container{
+    border: 3px solid var(--secondarycolor);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.image-container:hover .kuhusu-image{
+    transform: scale(1.4);
+}
+.kuhusu-image{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    transition: var(--mainTransition);
+}
+.kuhusu-kushoto, .kuhusu-kulia{
+    width: 100%;
+    flex-shrink: 0;
+}
+@media screen and (min-width:576px) {
+    .kuhusu-kushoto, .kuhusu-kulia{
+        width: 50%;
+    }
+    .kuhusu-kulia{
+        padding: 1rem;
+    }
+    .btn{
+        padding: 0.5rem 1rem;
+    }
+}
+.kuhusu-subtitle{
+    font-family: 'grandhotel';
+    font-size: 2.5rem;
+    color:var(--secondarycolor);
+    letter-spacing: var(--letterspacing);
+}
+.kuhusu-title{
+    font-family: 'catamaran';
+    text-transform: uppercase;
+    color:chocolate;
+    letter-spacing: var(--letterspacing);
+}
+.kuhusu-text{
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--secondarycolor);
+    color: black;
+    padding: .5rem 2rem;
+    outline: 2px solid  var(--primarycolor);
+    outline-offset: 2px;
+}
+.section-Dark{
+    background-color: var(--mainDark);
+    color:blue;
+}
+.bidhaa-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bidhaa{
+    width: 100%;
+    flex-shrink: 0;
+}
+.bidhaa-kushoto{
+   width: 100%; 
+   flex-shrink: 0;
+}
+.bidhaa-kulia{
+    width: 100%; 
+    flex-shrink: 0; 
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (min-width:720px) {
+    .bidhaa{
+        width: 50%;
+        padding-right: .5rem;
+    }
+    
+}
+@media screen and (min-width:920px) {
+    .bidhaa{
+        width: 33.3%;
+    }
+    
+}
+@media screen and(min-width:1200px) {
+    .bidhaa-kushoto{
+        width: 30%;
+    }
+    .bidhaa-kulia{
+        width: 70%;
+    }
+    
+}
+.bidhaa-title{
+    font-family: grandhotel;
+    color:saddlebrown;
+    font-size: 2.5rem;
+}
+.bidhaa-subtitle{
+    font-family: 'catamaran';
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.center-section{
+    text-align: center;
+    padding: 2rem 0;
+    margin: 0 4rem;
+}
+.bidhaa-kulia{
+    padding-top: 2rem;
+}
+.bidhaa-image{
+    width: 100%;
+    border-radius: 2rem;
+}
+.bidhaa-jina{
+    letter-spacing: var(--letterspacing);
+   color: aliceblue; 
+   text-transform: uppercase;
+   font-family: catamaran;
+}
+.bidhaa-bei{
+    color: red;
+}
+.wasiliana-title{
+    letter-spacing: var(--letterspacing);
+    color: var(--secondarycolor);
+    font-size: 1.7rem;
+    font-family: grandhotel;
+    margin-top: 1.6rem;
+}
+.wasiliana-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wasiliana-kushoto, .wasiliana-kulia{
+    width: 100%;
+}
+@media screen and (min-width:576px) {
+    .wasiliana-kushoto, .wasiliana-kulia{
+        width: 50%;
+        padding-right: 2rem;
+    }
+    
+}
+.input{
+    margin-top: 2rem;
+    display: block;   
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    border-bottom: 2px solid chocolate;
+}
+.input::placeholder{
+    text-transform: uppercase;
+    color: blue;
+    letter-spacing: var(--letterspacing);
+    font-weight: bold;
+}
+form button{
+    border: none;
+}
+.footer{
+    text-align: center;
+    padding: 2rem ;
+}
+.social-icon{
+    color: white;
+    font-size: 1.5rem;
+    transition: var(--mainTransition);
+}
+.social-icon:hover{
+    color: black;
+}
+.footer-text{
+    color: green;
+    font-family: catamaran;
+    font-size: 1.5rem
+}
+.footer-text span{
+    color:yellow;
+}
+.menu{
+    color: var(--secondarycolor);
+    font-size: 3.5rem;
+    position: fixed;
+    left: 1rem;
+    animation: dundadunda 2s infinite;
+}
+.navbar{
+    transform: translateX(-150%);
+    position: absolute;
+    background-color: chocolate;
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    transition: var(--mainTransition);
+}
+.OneshaNavbar{
+    transform: translateX(0);
+}
+.nav-link{
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: .5rem;
+    list-style-type: none;
+    font-family: grandhotel;
+    letter-spacing: var(--letterspacing);
+    color: aquamarine;
+    font-weight: bold;
+}
+.nav-close{
+   font-size: 2.5rem;
+}
